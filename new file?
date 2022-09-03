@@ -100,14 +100,14 @@ wait(2)
 
 firetouchinterest(game.Players.LocalPlayer.Character.Head, workspace.MainArea.Boss1, 0)
 
-wait(1)
+wait(0.5)
 for i,v in pairs(game.Workspace:GetDescendants()) do
 	if v.Parent.Name == (user) and v:IsA("Part") then
 	v.Rotation = Vector3.new(0, 90, 0)
 	end
 end
 
-	wait(0.25)
+	wait(2)
 game:GetService("Workspace").Part4.Stinky.Union.Position = Vector3.new(-96, 550, 300)
 
 for i,v in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
