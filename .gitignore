@@ -1,97 +1,3 @@
---[[
-Made by Ducky
---]]
-
-
-
-
-
-local ScreenGui = Instance.new("ScreenGui")
-local Frame = Instance.new("Frame")
-local upgrade = Instance.new("TextButton")
-local erro = Instance.new("TextButton")
-
-local credits = Instance.new("TextLabel")
-
-local part = Instance.new("Part", game.Workspace)
-
-
-part.Anchored = true
-
-part.Position = Vector3.new(-20, -5, -46)
-
-part.Name = "quacky"
-part.Size = Vector3.new(500, 7, 500)
-part.Material = "Fabric"
-part.Color = Color3.new(0.1,0.1,5)
-
-
-
-
-
-ScreenGui.Name = "Quackys"
-ScreenGui.Parent = game.CoreGui
-Frame.Parent = ScreenGui
-Frame.BackgroundColor3 = Color3.new(0.1,0.5,1)
-Frame.BackgroundTransparency = 0.4
-Frame.BorderSizePixel = 3
-Frame.Active = true
-Frame.Draggable = true
-Frame.Position = UDim2.new(0.295620441, 0, 0.234082401, 0)
-Frame.Size = UDim2.new(0, 313, 0, 250)
-
-
-
-
-
-upgrade.Name = "upgrade"
-upgrade.Parent = Frame
-upgrade.BackgroundColor3 = Color3.new(0, 1, 1)
-upgrade.BackgroundTransparency = 0.5
-upgrade.BorderSizePixel = 5
-upgrade.Position = UDim2.new(0.0543131009, 0, 0.161538467, 0)
-upgrade.Size = UDim2.new(0, 130, 0, 49)
-upgrade.Font = Enum.Font.Cartoon
-upgrade.FontSize = Enum.FontSize.Size14
-upgrade.Text = "IY"
-upgrade.TextSize = 14
-
-erro.Name = "erro"
-erro.Parent = Frame
-erro.BackgroundColor3 = Color3.new(0, 1, 1)
-erro.BackgroundTransparency = 0.5
-erro.BorderSizePixel = 5
-erro.Position = UDim2.new(0.527156591, 0, 0.161538467, 0)
-erro.Size = UDim2.new(0, 130, 0, 49)
-erro.Font = Enum.Font.Cartoon
-erro.FontSize = Enum.FontSize.Size14
-erro.Text = "Auto Farm "
-erro.TextSize = 14
-
-
-
-
-credits.Name = "credits"
-credits.Parent = Frame
-credits.BackgroundColor3 = Color3.new(1, 1, 1)
-credits.BackgroundTransparency = 1
-credits.Position = UDim2.new(0.255969, 0, 0.451538422, 0)
-credits.Size = UDim2.new(0, 117, 0, 39)
-credits.Font = Enum.Font.Cartoon
-credits.FontSize = Enum.FontSize.Size14
-credits.Text = "Made By Ducky\n hmm Duck PRO???!?!!?? *yes sir*\n to stop auto farm Use IY command Re\n make ur name Ducky for Become DuCkY??!?!"
-credits.TextSize = 17
-credits.Rotation = 10
-
-
-
-upgrade.MouseButton1Click:connect(function()
-
-loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
-
-
-end)
-erro.MouseButton1Click:connect(function()
 local user = game.Players.LocalPlayer.Name
 while wait() do 
 
@@ -100,7 +6,7 @@ wait(1)
 
 firetouchinterest(game.Players.LocalPlayer.Character.Head, workspace.MainArea.Boss1, 0)
 
-wait(1)
+wait(2)
 for i,v in pairs(game.Workspace:GetDescendants()) do
 	if v.Parent.Name == (user) and v:IsA("Part") then
 	v.Rotation = Vector3.new(0, 90, 0)
@@ -173,23 +79,4 @@ firetouchinterest(game.Players.LocalPlayer.Character.Head, workspace.Part4.Back,
 wait(0.25)
 
 
-end
-end)
-
-while wait() do
-	
-
-print("Started")
-
-local meow = game:GetService("Players").LocalPlayer.WINS.Value
-wait(299.5)
-local quack =game:GetService("Players").LocalPlayer.WINS.Value
-
-print("half way done")
-wait(0.5)
-print(meow - quack)
-wait(299.5)
-local meow2 = game:GetService("Players").LocalPlayer.WINS.Value
-wait(0.5)
-print(meow2 - meow)
 end
