@@ -1,5 +1,5 @@
 --[[
-Made by Ducky
+Made by Someone I changed display name to survive 
 --]]
 print("quack")
 
@@ -81,7 +81,7 @@ credits.Position = UDim2.new(0.255969, 0, 0.451538422, 0)
 credits.Size = UDim2.new(0, 117, 0, 39)
 credits.Font = Enum.Font.Cartoon
 credits.FontSize = Enum.FontSize.Size14
-credits.Text = "Made By Ducky\n hmm Duck PRO???!?!!?? *yes sir*\n make ur name Ducky for Become DuCkY??!?!"
+credits.Text = "Made By Someone\n hmm Someone PRO???!?!!?? *yes sir*\n make ur name Someone for Become Someone.\n can't tell name mate"
 credits.TextSize = 17
 credits.Rotation = 10
 
@@ -89,7 +89,7 @@ credits.Rotation = 10
 loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 upgrade.MouseButton1Click:connect(function()
 
-_G.meow = false
+_G.loops = false
 
 
 end)
@@ -97,14 +97,14 @@ end)
 erro.MouseButton1Click:connect(function()
 _G.loops = true
 local user = game.Players.LocalPlayer.Name
-while _G.meow do 
+while _G.loops do 
 
 
 wait(1)
 
 firetouchinterest(game.Players.LocalPlayer.Character.Head, workspace.MainArea.Boss1, 0)
 
-wait(0.5)
+wait(0.25)
 for i,v in pairs(game.Workspace:GetDescendants()) do
 	if v.Parent.Name == (user) and v:IsA("Part") then
 	v.Rotation = Vector3.new(0, 90, 0)
@@ -174,6 +174,9 @@ wait(1)
 
 
 firetouchinterest(game.Players.LocalPlayer.Character.Head, workspace.Part4.Back, 0)
+
+wait(0.25)
+
 
 end
 end)
