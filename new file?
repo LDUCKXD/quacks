@@ -107,7 +107,7 @@ for i,v in pairs(game.Workspace:GetDescendants()) do
 	end
 end
 
-	wait(2)
+	wait(0.25)
 game:GetService("Workspace").Part4.Stinky.Union.Position = Vector3.new(-96, 550, 300)
 
 for i,v in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
