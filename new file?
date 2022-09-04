@@ -100,7 +100,7 @@ local user = game.Players.LocalPlayer.Name
 while _G.loops do 
 
 
-wait(1.5)
+wait(2)
 
 firetouchinterest(game.Players.LocalPlayer.Character.Head, workspace.MainArea.Boss1, 0)
 
@@ -175,7 +175,7 @@ wait(1)
 
 firetouchinterest(game.Players.LocalPlayer.Character.Head, workspace.Part4.Back, 0)
 
-wait(0.25)
+
 
 
 end
