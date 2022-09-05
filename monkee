@@ -102,6 +102,8 @@ function equip()
    end
 end
 end
+
+
 function back()
 	firetouchinterest(game.Players.LocalPlayer.Character.Head, workspace.Part4.Back, 0)
 
@@ -110,33 +112,17 @@ erro.MouseButton1Click:connect(function()
 _G.loops = false
 
 repeat
-wait(1.75)
-pcall(ducky)
-
-wait(0.1)
-pcall(QUACKER)
-equip()
-wait(0.1)
-attack()
-wait(2.025)
-attack()
-wait(2.025)
-attack()
-wait(2.025)
-attack()
-wait(2.025)
-attack()
-wait(2.025)
-attack()
-wait(2.025)
-attack()
-wait(2.025)
-attack()
-wait(1)
-pcall(back)
-
-
-
+ repeat
+ pcall(ducky)
+ wait(0.5)
+ pcall(QUACKER)
+ equip()
+ attack()	
+ wait(2.1) 	
+ until game:GetService("Workspace").Part4.Stinky.Dodges.Value == 0	
+ attack()
+ wait(1)
+ pcall(back)
 
 
 until _G.loops 
