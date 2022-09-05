@@ -108,13 +108,13 @@ function DucksPower()
 	 repeat
  pcall(ducky)
  wait(0.05)
-until game:GetService("Workspace").Part4.Stinky
+ until game:GetService("Workspace").Part4.Stinky
  pcall(QUACKER)
- equip()
- attack()	
+ pcall(equip)
+ pcall(attack)
  wait(2.05) 	
  until game:GetService("Workspace").Part4.Stinky.Dodges.Value == 0	
- attack()
+ pcall(attack)
  wait(1)
  pcall(back)
 end
