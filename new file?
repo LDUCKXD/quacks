@@ -140,6 +140,8 @@ wait(2.05)
 attack()
 wait(2.05)
 attack()
+wait(2.05)
+attack()
 wait(1)
 
 
