@@ -105,8 +105,10 @@ end
 
 function DucksPower()
 	 repeat
+	 repeat
  pcall(ducky)
-
+ wait(0.05)
+until game:GetService("Workspace").Part4.Stinky
  pcall(QUACKER)
  equip()
  attack()	
