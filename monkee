@@ -122,9 +122,9 @@ _G.loops = false
 repeat
 
 
-wait(2)
+wait(1.7)
 pcall(ducky)
-wait(1)
+wait(0.95)
 pcall(QUACKER)
 equip()
 attack()
@@ -143,14 +143,6 @@ attack()
 wait(2.05)
 attack()
 wait(1)
-
-
-
-
-
-
-
-
 pcall(back)
 
 
