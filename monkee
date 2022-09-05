@@ -1,11 +1,11 @@
 --[[
 Made by Someone I changed display name to survive 
 --]]
-print("quack")
 
 
 
-wait(1)
+print("wait 30 sec")
+wait(30)
 local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local upgrade = Instance.new("TextButton")
@@ -103,9 +103,14 @@ function equip()
 end
 end
 
+
+function back()
+	firetouchinterest(game.Players.LocalPlayer.Character.Head, workspace.Part4.Back, 0)
+
+end
 function DucksPower()
 	 repeat
-	 repeat
+	 
  pcall(ducky)
  wait(0.05)
  until game:GetService("Workspace").Part4.Stinky
@@ -113,17 +118,20 @@ function DucksPower()
  wait(0.05)
  pcall(QUACKER)
  until game:GetService("Workspace").Part4.Stinky.Union.Position == Vector3.new(-96, 550, 299)
+ repeat
  pcall(equip)
  pcall(attack)
  wait(0.05) 	
- until game:GetService("Workspace").Part4.AmongUs1
+ until game:GetService("Workspace").Part4.Stinky.Dodges.Value == 0
+ repeat
+ pcall(equip)
+ pcall(attack)
  wait(0.1)
+ until game:GetService("Workspace").Part4.AmongUs1.Confirmed
  pcall(back)
 end
-function back()
-	firetouchinterest(game.Players.LocalPlayer.Character.Head, workspace.Part4.Back, 0)
 
-end
+print(gethiddenproperty(game.Players.LocalPlayer, "SimulationRadius")) --//test if you have over 1000 (will bypass the limit)
 erro.MouseButton1Click:connect(function()
 _G.loops = false
 
