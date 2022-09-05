@@ -34,7 +34,6 @@ Frame.Size = UDim2.new(0, 313, 0, 250)
 
 
 
-
 upgrade.Name = "upgrade"
 upgrade.Parent = Frame
 upgrade.BackgroundColor3 = Color3.new(0, 1, 1)
