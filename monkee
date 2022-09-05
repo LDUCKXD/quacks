@@ -120,11 +120,13 @@ erro.MouseButton1Click:connect(function()
 _G.loops = false
 
 repeat
-
-
-wait(1.7)
+wait(0.1)
 pcall(ducky)
-wait(0.95)
+wait(1.6)
+pcall(ducky)
+wait(0.40)
+pcall(ducky)
+wait(0.45)
 pcall(QUACKER)
 equip()
 attack()
