@@ -113,9 +113,10 @@ repeat
 wait(1.75)
 pcall(ducky)
 
-wait(0.25)
+wait(0.1)
 pcall(QUACKER)
 equip()
+wait(0.1)
 attack()
 wait(2.025)
 attack()
