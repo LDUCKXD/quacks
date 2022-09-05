@@ -109,13 +109,15 @@ function DucksPower()
  pcall(ducky)
  wait(0.05)
  until game:GetService("Workspace").Part4.Stinky
+ repeat
+ wait(0.05)
  pcall(QUACKER)
+ until game:GetService("Workspace").Part4.Stinky.Union.Position == Vector3.new(-96, 550, 299)
  pcall(equip)
  pcall(attack)
- wait(2.05) 	
- until game:GetService("Workspace").Part4.Stinky.Dodges.Value == 0	
- pcall(attack)
- wait(1)
+ wait(0.05) 	
+ until game:GetService("Workspace").Part4.AmongUs1
+ wait(0.1)
  pcall(back)
 end
 function back()
@@ -143,9 +145,12 @@ local quack =game:GetService("Players").LocalPlayer.WINS.Value
 
 print("half way done")
 wait(0.5)
-print(meow - quack)
+print(quack - meow)
 wait(299.5)
 local meow2 = game:GetService("Players").LocalPlayer.WINS.Value
 wait(0.5)
 print(meow2 - meow)
+wait(2999)
+local hehe = game:GetService("Players").LocalPlayer.WINS.Value
+print(hehe - meow) 
 end
