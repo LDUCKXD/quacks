@@ -13,8 +13,17 @@ local erro = Instance.new("TextButton")
 
 local credits = Instance.new("TextLabel")
 
+local part = Instance.new("Part", game.Workspace)
 
 
+part.Anchored = true
+
+part.Position = Vector3.new(-20, -5, -46)
+
+part.Name = "quacky"
+part.Size = Vector3.new(500, 7, 500)
+part.Material = "Fabric"
+part.Color = Color3.new(0.1,0.1,5)
 
 
 
@@ -111,11 +120,11 @@ erro.MouseButton1Click:connect(function()
 _G.loops = false
 
 repeat
-wait(1.5)
+
+
+wait(1.7)
 pcall(ducky)
-wait(0.75)
-pcall(ducky)
-0.75
+wait(0.95)
 pcall(QUACKER)
 equip()
 attack()
