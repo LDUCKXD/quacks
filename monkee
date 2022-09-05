@@ -11,6 +11,7 @@ local Frame = Instance.new("Frame")
 local upgrade = Instance.new("TextButton")
 local erro = Instance.new("TextButton")
 
+
 local credits = Instance.new("TextLabel")
 
 
@@ -95,35 +96,42 @@ end
 function attack()
 game.Players.LocalPlayer.Character["Troy😳"]:Activate()
 end
+
 function equip()
-	for i,v in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
-   if v:IsA("Tool") then
-        v.Parent = game:GetService("Players").LocalPlayer.Character
-   end
+
+for i,v in pairs(game.Players.LocalPlayer.Backpack:GetDescendants()) do 
+	if v:IsA("Tool") then
+		game.Players.LocalPlayer.Character.Humanoid:EquipTool(v)
+	end
 end
 end
 
+function check()
+game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Troy😳") 
+if game.Players.LocalPlayer.Backpack:FindFirstChild("Troy😳") or game.Players.LocalPlayer.Character:FindFirstChild("Troy😳") ~= nil then print("hey") else pcall(back) end
+end
 function DucksPower()
-	 repeat
-	 print("qqq")
+ wait(0.1)   
+ 
+
+ repeat
+ pcall(equip)
+ pcall(check)
  pcall(ducky)
- wait(0.05)
- until game:GetService("Workspace").Part4.Stinky.Name == "Stinky"
-  pcall(equip)
-
-	 repeat
-
  pcall(QUACKER)
  pcall(attack)	
  wait(0.05) 	
  until game:GetService("Workspace").Part4.AmongUs1	
+ repeat
+ back()
 
- pcall(back)
+ until game:GetService("Workspace").MainArea.Boss1
 end
+
 function back()
-	firetouchinterest(game.Players.LocalPlayer.Character.Head, workspace.Part4.Back, 0)
-
+firetouchinterest(game.Players.LocalPlayer.Character.Head, workspace.Part4.Back, 0)
 end
+
 erro.MouseButton1Click:connect(function()
 _G.loops = false
 
@@ -131,7 +139,7 @@ repeat
 
  pcall(DucksPower)
 
-until _G.loops 
+until _G.loops
 end)
 
 while wait() do
