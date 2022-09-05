@@ -85,100 +85,75 @@ credits.Text = "Made By Someone\n hmm Someone PRO???!?!!?? *yes sir*\n make ur n
 credits.TextSize = 17
 credits.Rotation = 10
 
-
+local user = game.Players.LocalPlayer.Name
 loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 upgrade.MouseButton1Click:connect(function()
 
-_G.loops = false
+_G.loops = true
 
 
 end)
+function QUACKER()
 
+game:GetService("Workspace").Part4.Stinky.Union.Position = Vector3.new(-96, 550, 299)
+end
+
+
+function ducky()
+	firetouchinterest(game.Players.LocalPlayer.Character.Head, workspace.MainArea.Boss1, 0)
+end
+function attack()
+game.Players.LocalPlayer.Character["Troy😳"]:Activate()
+end
+function equip()
+	for i,v in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
+   if v:IsA("Tool") then
+        v.Parent = game:GetService("Players").LocalPlayer.Character
+   end
+end
+end
+function back()
+	firetouchinterest(game.Players.LocalPlayer.Character.Head, workspace.Part4.Back, 0)
+
+end
 erro.MouseButton1Click:connect(function()
-_G.loops = true
-local user = game.Players.LocalPlayer.Name
-while _G.loops do 
+_G.loops = false
+
+repeat
 
 
 wait(2)
-
-firetouchinterest(game.Players.LocalPlayer.Character.Head, workspace.MainArea.Boss1, 0)
-
-wait(0.1)
-for i,v in pairs(game.Workspace:GetDescendants()) do
-	if v.Parent.Name == (user) and v:IsA("Part") then
-	v.Rotation = Vector3.new(0, 90, 0)
-	end
-end
-
-	wait(0.1)
-game:GetService("Workspace").Part4.Stinky.Union.Position = Vector3.new(-96, 550, 300)
-
-for i,v in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
-   if v:IsA("Tool") then
-        v.Parent = game:GetService("Players").LocalPlayer.Character
-   end
-end
-game.Players.LocalPlayer.Character["Troy😳"]:Activate()
+pcall(ducky)
+wait(1)
+pcall(QUACKER)
+equip()
+attack()
 wait(2.05)
-for i,v in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
-   if v:IsA("Tool") then
-        v.Parent = game:GetService("Players").LocalPlayer.Character
-   end
-end
-game.Players.LocalPlayer.Character["Troy😳"]:Activate()
+attack()
 wait(2.05)
-for i,v in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
-   if v:IsA("Tool") then
-        v.Parent = game:GetService("Players").LocalPlayer.Character
-   end
-end
-game.Players.LocalPlayer.Character["Troy😳"]:Activate()
+attack()
 wait(2.05)
-for i,v in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
-   if v:IsA("Tool") then
-        v.Parent = game:GetService("Players").LocalPlayer.Character
-   end
-end
-game.Players.LocalPlayer.Character["Troy😳"]:Activate()
+attack()
 wait(2.05)
-for i,v in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
-   if v:IsA("Tool") then
-        v.Parent = game:GetService("Players").LocalPlayer.Character
-   end
-end
-game.Players.LocalPlayer.Character["Troy😳"]:Activate()
+attack()
 wait(2.05)
-for i,v in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
-   if v:IsA("Tool") then
-        v.Parent = game:GetService("Players").LocalPlayer.Character
-   end
-end
-game.Players.LocalPlayer.Character["Troy😳"]:Activate()
+attack()
 wait(2.05)
-for i,v in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
-   if v:IsA("Tool") then
-        v.Parent = game:GetService("Players").LocalPlayer.Character
-   end
-end
-game.Players.LocalPlayer.Character["Troy😳"]:Activate()
-wait(2.05)
-for i,v in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
-   if v:IsA("Tool") then
-        v.Parent = game:GetService("Players").LocalPlayer.Character
-   end
-end
-game.Players.LocalPlayer.Character["Troy😳"]:Activate()
+attack()
 wait(1)
 
 
 
-firetouchinterest(game.Players.LocalPlayer.Character.Head, workspace.Part4.Back, 0)
 
 
 
 
-end
+
+pcall(back)
+
+
+
+until _G.loops 
 end)
 
 while wait() do
