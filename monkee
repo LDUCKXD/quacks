@@ -164,20 +164,19 @@ while wait() do
 local meow = game:GetService("Players").LocalPlayer.WINS.Value
 wait("600")
 local meow2 = game:GetService("Players").LocalPlayer.WINS.Value
-print("10 Min passed..)
+print("10 Min passed")
 print(meow2 - meow)
 wait(600)
 local meow3 = game:GetService("Players").LocalPlayer.WINS.Value
-print("20 Min passed..)
+print("20 Min passed..")
 print(meow3 - meow)
 
 wait(600)
 local meow4 = game:GetService("Players").LocalPlayer.WINS.Value
-print("30 Min passed..)
+print("30 Min passed..")
 print(meow4 - meow)
 wait(1800)
 local meow5 = game:GetService("Players").LocalPlayer.WINS.Value
 print("1 Hour Passed")
 print(meow5 - meow)
 end
-
