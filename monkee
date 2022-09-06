@@ -86,7 +86,7 @@ credits.Position = UDim2.new(0.255969, 0, 0.451538422, 0)
 credits.Size = UDim2.new(0, 117, 0, 39)
 credits.Font = Enum.Font.Cartoon
 credits.FontSize = Enum.FontSize.Size14
-credits.Text = "Mate start Learning Scripting if u don't know 😊😊😊 \n also create Stuff like this"
+credits.Text = "Made By Someone\n hmm Someone PRO???!?!!?? *yes sir*\n make ur name Someone for Become Someone.\n can't tell name mate"
 credits.TextSize = 17
 credits.Rotation = 10
 
@@ -101,7 +101,7 @@ end)
 hehe.MouseButton1Click:connect(function()
 ScreenGui:Destroy()
 _G.loops = true
-
+pcall(function() getgenv().hellno  = false end)
 
 end)
 function QUACKER()
