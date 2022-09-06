@@ -2,7 +2,7 @@
 Made by Someone I changed display name to survive 
 --]]
 print("quack")
-
+print("hey")
 
 
 wait(1)
@@ -11,7 +11,7 @@ local Frame = Instance.new("Frame")
 local upgrade = Instance.new("TextButton")
 local erro = Instance.new("TextButton")
 
-
+local hehe = Instance.new("TextButton")
 local credits = Instance.new("TextLabel")
 
 
@@ -23,6 +23,9 @@ local credits = Instance.new("TextLabel")
 
 ScreenGui.Name = "Quackys"
 ScreenGui.Parent = game.CoreGui
+
+
+
 Frame.Parent = ScreenGui
 Frame.BackgroundColor3 = Color3.new(0.1,0.5,1)
 Frame.BackgroundTransparency = 0.4
@@ -31,11 +34,20 @@ Frame.Active = true
 Frame.Draggable = true
 Frame.Position = UDim2.new(0.295620441, 0, 0.234082401, 0)
 Frame.Size = UDim2.new(0, 313, 0, 250)
+Frame.Rotation = 7
 
-
-
-
-
+hehe.Name = "hehe"
+hehe.Parent = Frame
+hehe.BackgroundColor3 = Color3.new(0, 0, 0)
+hehe.BackgroundTransparency = 0.3
+hehe.BorderSizePixel = 5
+hehe.Position = UDim2.new(0, 290, 0, 3)
+hehe.Size = UDim2.new(0, 20, 0, 20)
+hehe.Font = Enum.Font.Cartoon
+hehe.FontSize = Enum.FontSize.Size14
+hehe.Text = "X"
+hehe.TextSize = 30
+hehe.TextColor3 = Color3.new(2,2,2)
 upgrade.Name = "upgrade"
 upgrade.Parent = Frame
 upgrade.BackgroundColor3 = Color3.new(0, 1, 1)
@@ -84,6 +96,12 @@ _G.loops = true
 
 
 end)
+hehe.MouseButton1Click:connect(function()
+ScreenGui:Destroy()
+_G.loops = true
+
+
+end)
 function QUACKER()
 
 game:GetService("Workspace").Part4.Stinky.Union.Position = Vector3.new(-96, 550, 299)
@@ -108,9 +126,12 @@ end
 
 function check()
 game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Troy😳") 
-if game.Players.LocalPlayer.Backpack:FindFirstChild("Troy😳") or game.Players.LocalPlayer.Character:FindFirstChild("Troy😳") ~= nil then print("hey") else pcall(back) end
+if game.Players.LocalPlayer.Backpack:FindFirstChild("Troy😳") or game.Players.LocalPlayer.Character:FindFirstChild("Troy😳") ~= nil then else pcall(back) end
 end
 function DucksPower()
+ wait(0.1)   
+ 
+
  repeat
  pcall(equip)
  pcall(check)
@@ -156,3 +177,4 @@ local meow2 = game:GetService("Players").LocalPlayer.WINS.Value
 wait(0.5)
 print(meow2 - meow)
 end
+
