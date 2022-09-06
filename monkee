@@ -86,7 +86,7 @@ credits.Position = UDim2.new(0.255969, 0, 0.451538422, 0)
 credits.Size = UDim2.new(0, 117, 0, 39)
 credits.Font = Enum.Font.Cartoon
 credits.FontSize = Enum.FontSize.Size14
-credits.Text = "Mate start Learning Scripting if u don't know 😊😊😊 \n also create hacksss like this"
+credits.Text = "Mate start Learning Scripting if u don't know 😊😊😊 \n also create Stuff like this"
 credits.TextSize = 17
 credits.Rotation = 10
 
