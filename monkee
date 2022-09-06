@@ -140,7 +140,7 @@ function DucksPower()
  wait(0.05) 	
  until game:GetService("Workspace").Part4.AmongUs1	
  repeat
- back()
+ pcall(back)
 
  until game:GetService("Workspace").MainArea.Boss1
 end
