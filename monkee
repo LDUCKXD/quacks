@@ -1,10 +1,13 @@
 
- 
-if hellno == true then
-	error("Sir u can't open Gui 2 times??!?!?!?",0)
+
+
+if mer  then
+	error("DUcky no 2 !",0)
 	return
 end
-pcall(function() getgenv().hellno  = true end)
+
+pcall(function() getgenv().mer = true end)
+
 
 wait(1)
 local ScreenGui = Instance.new("ScreenGui")
