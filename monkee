@@ -1,12 +1,12 @@
 
 
 
-if mer  then
+if quacky  then
 	error("DUcky no 2 !",0)
 	return
 end
 
-pcall(function() getgenv().mer = true end)
+pcall(function() getgenv().quacky = true end)
 
 
 wait(1)
@@ -104,7 +104,7 @@ end)
 hehe.MouseButton1Click:connect(function()
 ScreenGui:Destroy()
 _G.loops = true
-pcall(function() getgenv().hellno  = false end)
+pcall(function() getgenv().quacky  = false end)
 
 end)
 function QUACKER()
