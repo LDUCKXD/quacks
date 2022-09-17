@@ -89,10 +89,15 @@ credits.Position = UDim2.new(0.255969, 0, 0.451538422, 0)
 credits.Size = UDim2.new(0, 117, 0, 39)
 credits.Font = Enum.Font.Cartoon
 credits.FontSize = Enum.FontSize.Size14
-credits.Text = "Made By Someone\n hmm Someone PRO???!?!!?? *yes sir*\n make ur name Someone for Become Someone.\n can't tell name mate"
+credits.Text = "Added Anti Afk"
 credits.TextSize = 17
 credits.Rotation = 10
-
+local antikicky!Boii = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+   antikicky!Boii:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+   wait(0.25)
+   antikicky!Boii:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+end)
 
 loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 upgrade.MouseButton1Click:connect(function()
