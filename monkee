@@ -138,7 +138,7 @@ game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Troy😳")
 if game.Players.LocalPlayer.Backpack:FindFirstChild("Troy😳") or game.Players.LocalPlayer.Character:FindFirstChild("Troy😳") ~= nil then else pcall(back) end
 end
 function DucksPower()
- wait(0.1)   
+ wait(0.01)   
  
 
  repeat
