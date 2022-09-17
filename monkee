@@ -1,5 +1,5 @@
 
-queue_on_teleport([[loadstring(game:HttpGet("https://raw.githubusercontent.com/LDUCKXD/quacks/main/monkee"))()]])
+queue_on_teleport([[if game.PlaceId == 9611586905 then loadstring(game:HttpGet("https://raw.githubusercontent.com/LDUCKXD/quacks/main/monkee"))() end]])
 
 if quacky  then
 	error("DUcky no 2 !",0)
