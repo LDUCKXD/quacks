@@ -89,17 +89,16 @@ credits.Position = UDim2.new(0.255969, 0, 0.451538422, 0)
 credits.Size = UDim2.new(0, 117, 0, 39)
 credits.Font = Enum.Font.Cartoon
 credits.FontSize = Enum.FontSize.Size14
-credits.Text = "Added Anti Afk"
+credits.Text = "Added Anti Afk also removed IY openning"
 credits.TextSize = 17
 credits.Rotation = 10
-local antikicky!Boii = game:GetService("VirtualUser")
+local antikickyBoii = game:GetService("VirtualUser")
 game:GetService("Players").LocalPlayer.Idled:connect(function()
-   antikicky!Boii:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+   antikickyBoii:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
    wait(0.25)
-   antikicky!Boii:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+   antikickyBoii:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
 end)
 
-loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 upgrade.MouseButton1Click:connect(function()
 
 _G.loops = true
