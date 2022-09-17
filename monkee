@@ -89,13 +89,13 @@ credits.Position = UDim2.new(0.255969, 0, 0.451538422, 0)
 credits.Size = UDim2.new(0, 117, 0, 39)
 credits.Font = Enum.Font.Cartoon
 credits.FontSize = Enum.FontSize.Size14
-credits.Text = "+Added Anti Afk and -Removed Auto IY openning"
+credits.Text = "+Added Anti Afk and \n-Removed Auto IY openning"
 credits.TextSize = 17
 credits.Rotation = 10
 local antikickyBoii = game:GetService("VirtualUser")
 game:GetService("Players").LocalPlayer.Idled:connect(function()
    antikickyBoii:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
-   wait(0.25)
+   wait(1)
    antikickyBoii:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
 end)
 
