@@ -17,9 +17,9 @@ Duration = 10;
 	local sound = Instance.new("Sound")
 
 sound.Name = "Sound"
-sound.SoundId = "http://www.roblox.com/asset/?id=4613871802" -- Song ID at end.
-sound.Volume = 20 -- Derp (I have quality speakers you might need to change this.)
-sound.Pitch = 1 --Speed of Playback.
+sound.SoundId = "http://www.roblox.com/asset/?id=4613871802" 
+sound.Volume = 20 -- 
+sound.Pitch = 1 
 sound.Looped = false
 sound.archivable = false
 
@@ -122,7 +122,7 @@ credits.Position = UDim2.new(0.255969, 0, 0.451538422, 0)
 credits.Size = UDim2.new(0, 117, 0, 39)
 credits.Font = Enum.Font.Cartoon
 credits.FontSize = Enum.FontSize.Size14
-credits.Text = "+added openning sound\nadded game checker"
+credits.Text = "Last Version\n VERY FAST \n last uptate"
 credits.TextSize = 17
 credits.Rotation = 10
 local antikickyBoii = game:GetService("VirtualUser")
