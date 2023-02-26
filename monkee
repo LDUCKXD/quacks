@@ -21,23 +21,7 @@ Duration = 10;
 
 
 
-	local sound = Instance.new("Sound")
 
-sound.Name = "Sound"
-sound.SoundId = "http://www.roblox.com/asset/?id=4613871802" 
-sound.Volume = 20 -- 
-sound.Pitch = 1 
-sound.Looped = false
-sound.archivable = false
-
-
-sound.Parent = game.Workspace
-
-
-
-sound:play()
-wait(1.3)
-sound:Destroy()
 
 
 
