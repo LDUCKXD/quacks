@@ -20,35 +20,6 @@ Duration = 10;
 })
 
 
-
-
-
-
-
-	TeleportService = game:GetService("TeleportService")
-	Players = game:GetService("Players")
-	COREGUI = game:GetService("CoreGui")
-	PlaceId, JobId = game.PlaceId, game.JobId
-	local Dir = COREGUI:FindFirstChild("RobloxPromptGui"):FindFirstChild("promptOverlay")
-	Dir.DescendantAdded:Connect(function(Err)
-		if Err.Name == "ErrorTitle" then
-			Err:GetPropertyChangedSignal("Text"):Connect(function()
-				if Err.Text:sub(0, 12) == "Disconnected" then
-					if #Players:GetPlayers() <= 1 then
-						Players.LocalPlayer:Kick("\nRejoining...")
-						wait()
-						TeleportService:Teleport(PlaceId, Players.LocalPlayer)
-					else
-						TeleportService:TeleportToPlaceInstance(PlaceId, JobId, Players.LocalPlayer)
-					end
-				end
-			end)
-		end
-	end)
-
-
-
-
 wait(1)
 local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
