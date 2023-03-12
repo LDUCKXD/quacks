@@ -1,3 +1,11 @@
+-- WATCH F9 (console)
+
+
+--[[IF YOU ARE A MOD u call Contact me and I can take down 
+Script if u want to so no longer dead game farm also I love being hisirbey]]--
+
+print("!!!!!!!!!!!!!!!Features!!!!!!!!!!!!!!!\n it auto rejoins and beats boss(no kicky kicky)\n IT is FAST like 1500 A HOUR holy moly thats a lot")
+
 
 if game.PlaceId ~= 9611586905 then 
 game.StarterGui:SetCore("SendNotification", {
@@ -20,7 +28,21 @@ Duration = 10;
 })
 
 
+
 wait(1)
+local function Real()
+  local Real =
+      
+      (KRNL_LOADED and "Krnl Works") or
+     
+      ("Didn't Tested Type DM me \n and your executer \n works or not")
+
+  return Real
+end
+
+
+
+print(Real())
 
 queue_on_teleport([[
 loadstring(game:HttpGet('https://raw.githubusercontent.com/LDUCKXD/quacks/main/auto'))()]])
