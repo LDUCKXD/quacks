@@ -23,7 +23,7 @@ Duration = 10;
 wait(1)
 
 queue_on_teleport([[
-loadstring(game:HttpGet('https://github.com/LDUCKXD/quacks/blob/main/auto'))()]])
+loadstring(game:HttpGet('https://raw.githubusercontent.com/LDUCKXD/quacks/main/auto'))()]])
 
 local antikickyBoii = game:GetService("VirtualUser")
 game:GetService("Players").LocalPlayer.Idled:connect(function()
