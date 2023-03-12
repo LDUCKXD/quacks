@@ -25,6 +25,17 @@ wait(1)
 queue_on_teleport([[
 loadstring(game:HttpGet('https://raw.githubusercontent.com/LDUCKXD/quacks/main/auto'))()]])
 
+local mt = getrawmetatable(game)
+local nm = mt.__namecall
+setreadonly(mt,false)
+mt.__namecall = newcclosure(function(self,...)
+    if getnamecallmethod() == 'Kick' or getnamecallmethod() == 'kick' then
+        game:GetService("TeleportService"):Teleport(game.PlaceId)
+    end
+
+    return nm(self,...)
+end)
+
 local antikickyBoii = game:GetService("VirtualUser")
 game:GetService("Players").LocalPlayer.Idled:connect(function()
    antikickyBoii:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
