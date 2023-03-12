@@ -7,7 +7,10 @@ Duration = 10;
 })
 else
 
-
+if quacky  then
+	error("DUcky no 2 !",0)
+return
+end
 
 pcall(function() getgenv().quacky = true end)
 game.StarterGui:SetCore("SendNotification", {
@@ -19,7 +22,8 @@ Duration = 10;
 
 wait(1)
 
-
+queue_on_teleport([[
+loadstring(game:HttpGet('https://github.com/LDUCKXD/quacks/blob/main/auto'))()]])
 
 local antikickyBoii = game:GetService("VirtualUser")
 game:GetService("Players").LocalPlayer.Idled:connect(function()
