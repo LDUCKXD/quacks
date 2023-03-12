@@ -25,15 +25,22 @@ wait(1)
 queue_on_teleport([[
 loadstring(game:HttpGet('https://raw.githubusercontent.com/LDUCKXD/quacks/main/auto'))()]])
 
-local mt = getrawmetatable(game)
-local nm = mt.__namecall
-setreadonly(mt,false)
-mt.__namecall = newcclosure(function(self,...)
-    if getnamecallmethod() == 'Kick' or getnamecallmethod() == 'kick' then
-        game:GetService("TeleportService"):Teleport(game.PlaceId)
+if not game:IsLoaded() then
+	game.Loaded:Wait()
+end
+game.CoreGui.RobloxPromptGui.promptOverlay.DescendantAdded:Connect(function()
+    local GUI = game.CoreGui.RobloxPromptGui.promptOverlay:FindFirstChild("ErrorPrompt")
+    if GUI then
+        if GUI.TitleFrame.ErrorTitle.Text == "Disconnected" then
+            if #game.Players:GetPlayers() <= 1 then
+                game.Players.LocalPlayer:Kick("\nRejoining...")
+                wait()
+                game:GetService("TeleportService"):Teleport(game.PlaceId, game.Players.LocalPlayer)
+            else
+                game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, game.JobId, game.Players.LocalPlayer)
+            end
+        end
     end
-
-    return nm(self,...)
 end)
 
 local antikickyBoii = game:GetService("VirtualUser")
