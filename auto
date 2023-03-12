@@ -1,0 +1,104 @@
+
+if game.PlaceId ~= 9611586905 then 
+game.StarterGui:SetCore("SendNotification", {
+Title = "GameId Check";
+Text = "this is not the game"; 
+Duration = 10; 
+})
+else
+
+
+
+pcall(function() getgenv().quacky = true end)
+game.StarterGui:SetCore("SendNotification", {
+Title = "GameId Check";
+Text = "IT IS THE GAME!!"; 
+Duration = 10; 
+})
+
+
+wait(1)
+
+
+
+local antikickyBoii = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+   antikickyBoii:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+   wait(1)
+   antikickyBoii:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+end)
+
+function QUACKER()
+
+game:GetService("Workspace").Part4.Stinky.Union.Position = Vector3.new(-96, 550, 299)
+end
+
+
+function ducky()
+	firetouchinterest(game.Players.LocalPlayer.Character.Head, workspace.MainArea.Boss1, 0)
+end
+function attack()
+game.Players.LocalPlayer.Character["Troy😳"]:Activate()
+end
+
+function equip()
+
+for i,v in pairs(game.Players.LocalPlayer.Backpack:GetDescendants()) do 
+	if v:IsA("Tool") then
+		game.Players.LocalPlayer.Character.Humanoid:EquipTool(v)
+	end
+end
+end
+
+function check()
+game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Troy😳") 
+if game.Players.LocalPlayer.Backpack:FindFirstChild("Troy😳") or game.Players.LocalPlayer.Character:FindFirstChild("Troy😳") ~= nil then else pcall(back) end
+end
+function DucksPower()
+ wait(0.001)   
+ 
+
+ repeat
+ pcall(equip)
+ pcall(check)
+ pcall(ducky)
+ pcall(QUACKER)
+ pcall(attack)	
+ wait(0.001) 	
+ until game:GetService("Workspace").Part4.AmongUs1	
+ repeat
+ back()
+
+ until game:GetService("Workspace").MainArea.Boss1
+end
+
+function back()
+firetouchinterest(game.Players.LocalPlayer.Character.Head, workspace.Part4.Back, 0)
+end 
+repeat
+
+ pcall(DucksPower)
+
+until _G.loops
+while wait() do
+	
+local meow = game:GetService("Players").LocalPlayer.WINS.Value
+wait("5")
+local meow2 = game:GetService("Players").LocalPlayer.WINS.Value
+
+print("10 Min passed wins u got",meow2 - meow)
+wait(600)
+local meow3 = game:GetService("Players").LocalPlayer.WINS.Value
+
+print("20 Min passed.. Wins u got is",meow3 - meow)
+
+wait(600)
+local meow4 = game:GetService("Players").LocalPlayer.WINS.Value
+print("30 Min passed..wins u got", meow4 - meow)
+
+wait(1800)
+local meow5 = game:GetService("Players").LocalPlayer.WINS.Value
+print("1 HOUR PASSED wins  u got",meow5 - meow)
+
+end
+end
