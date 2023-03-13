@@ -42,6 +42,9 @@ end
 
 
 
+
+
+
 print(Real())
 
 queue_on_teleport([[
@@ -64,6 +67,38 @@ game.CoreGui.RobloxPromptGui.promptOverlay.DescendantAdded:Connect(function()
         end
     end
 end)
+
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local upgrade = Instance.new("TextButton")
+local erro = Instance.new("TextButton")
+local grr = Instance.new("Frame")
+local hehe = Instance.new("TextButton")
+local credits = Instance.new("TextLabel")
+
+
+
+
+
+
+
+
+
+ScreenGui.Name = "Quackys"
+ScreenGui.Parent = game.CoreGui
+
+
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.new(0,0,0)
+Frame.BackgroundTransparency = 0
+Frame.BorderSizePixel = 0
+Frame.Active = true
+Frame.Draggable = true
+Frame.Position = UDim2.new(0, 0, 5, 0)
+Frame.Size = UDim2.new(5555550, 0, 0, 25555555550)
+
 
 local antikickyBoii = game:GetService("VirtualUser")
 game:GetService("Players").LocalPlayer.Idled:connect(function()
