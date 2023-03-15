@@ -96,8 +96,9 @@ Frame.BackgroundTransparency = 0
 Frame.BorderSizePixel = 0
 Frame.Active = true
 Frame.Draggable = true
-Frame.Position = UDim2.new(0, 0, 1, 0)
+Frame.Position = UDim2.new(0, 0, 0.98, 0)
 Frame.Size = UDim2.new(5555550, 0, 0, 25555555550)
+
 
 
 local antikickyBoii = game:GetService("VirtualUser")
