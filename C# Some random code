@@ -1,0 +1,234 @@
+ private void button1_Click(object sender, EventArgs e)
+ {
+
+     if(numericUpDown1.Value<20)
+     {
+         info_seyi("askerlik yaşı 20");
+     }
+     else if (listBox1.SelectedIndex==-1)
+     {
+         err("Eğitim Bilgilerini Seçiniz");
+     }    
+     else if(listBox1.SelectedIndex==2&&comboBox2.SelectedIndex!=-1)
+     {
+         info_seyi("Bu simdi " + comboBox2.Text + " öğrencisi olmaz asker");
+     }
+     else if (listBox1.SelectedIndex==2&&comboBox2.SelectedIndex!=-1)
+     {
+         err("Öğretim Alanını boş bıraktınız");
+     }
+     else if(listBox1.SelectedIndex!=3)
+     {
+         info_seyi("Kisi askere gidemez");
+     }
+     else if (comboBox2.SelectedIndex == -1)
+     {
+         err("Okul Bilgilerini giriniz");
+     }
+     else if(comboBox3.SelectedIndex==-1)
+     {
+         err("Mezuniyet Yılınızı seçiniz");
+     }
+     else if(radioButton3.Checked || radioButton4.Checked)
+     {
+         MessageBox.Show("Başvuru Başarılı", "Başvuru", MessageBoxButtons.OK, MessageBoxIcon.Information);
+     }
+     else
+     {
+         err("İkimigah bölgesini seçiniz");
+     }
+
+
+
+
+ }
+ void err(string x)
+ {
+     MessageBox.Show(x, "Hatalı Giriş Yapıldı", MessageBoxButtons.OK, MessageBoxIcon.Error);
+ }
+ void info_seyi(string x)
+ {
+     MessageBox.Show(x, "Bilgilendirme", MessageBoxButtons.OK, MessageBoxIcon.Information);
+ }
+
+ private void comboBox3_DropDown(object sender, EventArgs e)
+ {
+
+
+ }
+
+ private void timer1_Tick(object sender, EventArgs e)
+ {
+     this.Text = this.Text.Substring(1) + this.Text.Substring(0, 1);
+
+
+
+ }
+ private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+ {
+    if (comboBox1.SelectedIndex == 0)
+     {
+
+         radioButton1.Enabled = true;
+         radioButton2.Enabled = true;
+
+     }
+
+     else if (comboBox1.SelectedIndex == 1)
+     {
+         {
+             button1.Enabled = false;
+             comboBox2.Enabled = false;
+             comboBox2.SelectedIndex = -1;
+             comboBox3.Enabled = false;
+             comboBox3.SelectedIndex = -1;
+             radioButton1.Enabled = false;
+             radioButton2.Enabled = false;
+             numericUpDown1.Enabled = false;
+             numericUpDown1.Value = 0;
+             listBox1.Enabled = false;
+             listBox1.SelectedIndex = -1;
+             radioButton3.Enabled = false;
+             radioButton4.Enabled = false;
+             info_seyi("Türkiye Cumhuruyeti Vatandaşı olmayanlar ülkemizde askere gidemez");
+         }
+
+        }
+ }
+
+ private void radioButton2_CheckedChanged(object sender, EventArgs e)
+ {
+     if (radioButton2.Checked)
+     {
+         comboBox1.SelectedIndex = -1;
+         info_seyi("Ülkemizde, Kadınlar askere gidemez");
+         button1.Enabled = false;
+         comboBox2.Enabled = false;
+         comboBox2.SelectedIndex = -1;
+         comboBox3.Enabled = false;
+         comboBox3.SelectedIndex = -1;
+         numericUpDown1.Enabled = false;
+         numericUpDown1.Value = 0;
+         listBox1.Enabled = false;
+         listBox1.SelectedIndex = -1;
+         radioButton3.Enabled = false;
+         radioButton4.Enabled = false;
+     }
+
+ }
+
+ private void radioButton1_CheckedChanged(object sender, EventArgs e)
+ {
+     if (radioButton1.Checked)
+     {
+         numericUpDown1.Enabled = true;
+         button1.Enabled = true;
+     }
+
+ }
+
+ private void comboBox1_Leave(object sender, EventArgs e)
+ {
+
+ }
+
+ private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+ {
+     if (numericUpDown1.Value >= 20)
+     {
+         listBox1.Enabled = true;
+         comboBox3.Items.Clear();
+         for (int i = 5; i <= numericUpDown1.Value; i++)
+         {
+             decimal total = (DateTime.Now.Year - numericUpDown1.Value + i);
+             comboBox3.Items.Add(DateTime.Now.Year - numericUpDown1.Value + i);
+
+
+         }
+     }
+     else
+     {
+         comboBox2.Enabled = false;
+         comboBox2.SelectedIndex = -1;
+         comboBox3.Enabled = false;
+         comboBox3.SelectedIndex = -1;
+         listBox1.Enabled = false;
+         listBox1.SelectedIndex = -1;
+         radioButton3.Enabled = false;
+         radioButton4.Enabled = false;
+     }
+
+ }
+
+ private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+ {
+     if (listBox1.SelectedIndex == 3)
+     {
+         comboBox2.Enabled = true;
+         comboBox3.Enabled = true;
+         radioButton3.Enabled = true;
+         radioButton4.Enabled = true;
+     }
+     else if (listBox1.SelectedIndex == 2)
+     {
+         comboBox2.Enabled = true;
+
+         comboBox3.Enabled = false;
+         comboBox3.SelectedIndex = -1;
+         radioButton3.Enabled = false;
+         radioButton4.Enabled = false;
+         radioButton3.Checked = false;
+         radioButton4.Checked = false;
+     }
+     else
+     {
+         comboBox2.Enabled = false;
+         comboBox2.SelectedIndex = -1;
+         comboBox3.Enabled = false;
+         comboBox3.SelectedIndex = -1;
+         radioButton3.Enabled = false;
+         radioButton4.Enabled = false;
+         radioButton3.Checked = false;
+         radioButton4.Checked = false;
+     }
+
+ }
+
+
+
+ private void numericUpDown1_KeyDown(object sender, KeyEventArgs e)
+ {
+     if (numericUpDown1.Value >= 20)
+     {
+         listBox1.Enabled = true;
+         comboBox3.Items.Clear();
+         for (int i = 5; i <= numericUpDown1.Value; i++)
+         {
+             decimal total = (DateTime.Now.Year - numericUpDown1.Value + i);
+             comboBox3.Items.Add(DateTime.Now.Year - numericUpDown1.Value + i);
+
+
+         }
+     }
+     else
+     {
+         comboBox2.Enabled = false;
+         comboBox2.SelectedIndex = -1;
+         comboBox3.Enabled = false;
+         comboBox3.SelectedIndex = -1;
+         listBox1.Enabled = false;
+         listBox1.SelectedIndex = -1;
+         radioButton3.Enabled = false;
+         radioButton4.Enabled = false;
+     }
+ }
+
+ private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+ {
+     if (MessageBox.Show("Uygulamayı Kapatmak İstediğinizden Emin Misiniz?", "Bilgilendirme",
+         MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.No)
+     {
+         e.Cancel = true;
+     }
+
+ }
