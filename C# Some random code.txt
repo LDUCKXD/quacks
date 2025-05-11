@@ -28,7 +28,12 @@
      else if(comboBox3.SelectedIndex==-1)
      {
          err("Mezuniyet Yılınızı seçiniz");
+
      }
+else if(checkBox3.SelectedIndex>checkBox3.Items.Count-2)
+{
+info_seyi("kişi mezun olduktan 2 uıal geçmesi gerekiyor")
+}
      else if(radioButton3.Checked || radioButton4.Checked)
      {
          MessageBox.Show("Başvuru Başarılı", "Başvuru", MessageBoxButtons.OK, MessageBoxIcon.Information);
