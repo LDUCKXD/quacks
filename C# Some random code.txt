@@ -140,7 +140,7 @@
          comboBox3.Items.Clear();
          for (int i = 5; i <= numericUpDown1.Value; i++)
          {
-             decimal total = (DateTime.Now.Year - numericUpDown1.Value + i);
+             
              comboBox3.Items.Add(DateTime.Now.Year - numericUpDown1.Value + i);
 
 
