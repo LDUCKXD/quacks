@@ -3,35 +3,37 @@
 
      if(numericUpDown1.Value<20)
      {
-         info_seyi("askerlik yaşı 20");
+         info_seyi("askerlik yaş 20");
      }
      else if (listBox1.SelectedIndex==-1)
      {
-         err("Eğitim Bilgilerini Seçiniz");
+         err("Eğitim Seçiniz");
      }    
      else if(listBox1.SelectedIndex==2&&comboBox2.SelectedIndex!=-1)
      {
-         info_seyi("Bu simdi " + comboBox2.Text + " öğrencisi olmaz asker");
+         info_seyi("Bu" + comboBox2.Text + " öğrencisi asker olamaz");
      }
      else if (listBox1.SelectedIndex==2&&comboBox2.SelectedIndex!=-1)
      {
-         err("Öğretim Alanını boş bıraktınız");
+         err("Öğretim Alanını boş");
      }
      else if(listBox1.SelectedIndex!=3)
      {
-         info_seyi("Kisi askere gidemez");
+         info_seyi("Kisi askere gider");
      }
      else if (comboBox2.SelectedIndex == -1)
      {
-         err("Okul Bilgilerini giriniz");
+         err("Okul Bilgileri boş");
      }
      else if(comboBox3.SelectedIndex==-1)
      {
-         err("Mezuniyet Yılınızı seçiniz");
+         err("mezun yılınızı seçiniz");
+
      }
+
      else if(radioButton3.Checked || radioButton4.Checked)
      {
-         MessageBox.Show("Başvuru Başarılı", "Başvuru", MessageBoxButtons.OK, MessageBoxIcon.Information);
+         info_seyi("Kisi askere gider")
      }
      else
      {
@@ -140,7 +142,7 @@
          comboBox3.Items.Clear();
          for (int i = 5; i <= numericUpDown1.Value; i++)
          {
-             
+             decimal total = (DateTime.Now.Year - numericUpDown1.Value + i);
              comboBox3.Items.Add(DateTime.Now.Year - numericUpDown1.Value + i);
 
 
