@@ -1,4 +1,5 @@
- private void button1_Click(object sender, EventArgs e)
+//Buttona iki kez tıkla
+private void button1_Click(object sender, EventArgs e)
  {
 
      if(numericUpDown1.Value<20)
@@ -30,6 +31,12 @@
          err("mezun yılınızı seçiniz");
 
      }
+     else if(comboBox3.SelectedIndex>comboBox3.Items.Count-4)
+    {
+        err("2 yıl geçmesi lazım");
+    }
+
+
 
      else if(radioButton3.Checked || radioButton4.Checked)
      {
@@ -44,6 +51,7 @@
 
 
  }
+// bu ikisini ekle
  void err(string x)
  {
      MessageBox.Show(x, "Hatalı Giriş Yapıldı", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -53,19 +61,13 @@
      MessageBox.Show(x, "Bilgilendirme", MessageBoxButtons.OK, MessageBoxIcon.Information);
  }
 
- private void comboBox3_DropDown(object sender, EventArgs e)
- {
-
-
- }
-
  private void timer1_Tick(object sender, EventArgs e)
  {
      this.Text = this.Text.Substring(1) + this.Text.Substring(0, 1);
 
 
-
  }
+ // bunu combobox1 den Yıldırım'a basarak yapabilirsin
  private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
  {
     if (comboBox1.SelectedIndex == 0)
@@ -97,6 +99,7 @@
 
         }
  }
+//radio button 2 yıldırım
 
  private void radioButton2_CheckedChanged(object sender, EventArgs e)
  {
@@ -118,7 +121,7 @@
      }
 
  }
-
+// yıldırım 
  private void radioButton1_CheckedChanged(object sender, EventArgs e)
  {
      if (radioButton1.Checked)
@@ -129,11 +132,7 @@
 
  }
 
- private void comboBox1_Leave(object sender, EventArgs e)
- {
-
- }
-
+//numeric updown'a yıldırım vas value changed al
  private void numericUpDown1_ValueChanged(object sender, EventArgs e)
  {
      if (numericUpDown1.Value >= 20)
@@ -142,7 +141,7 @@
          comboBox3.Items.Clear();
          for (int i = 5; i <= numericUpDown1.Value; i++)
          {
-             decimal total = (DateTime.Now.Year - numericUpDown1.Value + i);
+             
              comboBox3.Items.Add(DateTime.Now.Year - numericUpDown1.Value + i);
 
 
@@ -197,8 +196,8 @@
  }
 
 
-
- private void numericUpDown1_KeyDown(object sender, KeyEventArgs e)
+// eğer çalışmassa KeyUp'ı KeyDown eventi ile değiştir
+ private void numericUpDown1_KeyUp(object sender, KeyEventArgs e)
  {
      if (numericUpDown1.Value >= 20)
      {
@@ -206,7 +205,7 @@
          comboBox3.Items.Clear();
          for (int i = 5; i <= numericUpDown1.Value; i++)
          {
-             decimal total = (DateTime.Now.Year - numericUpDown1.Value + i);
+            
              comboBox3.Items.Add(DateTime.Now.Year - numericUpDown1.Value + i);
 
 
@@ -224,7 +223,7 @@
          radioButton4.Enabled = false;
      }
  }
-
+//Form a yıldırım bas
  private void Form1_FormClosing(object sender, FormClosingEventArgs e)
  {
      if (MessageBox.Show("Uygulamayı Kapatmak İstediğinizden Emin Misiniz?", "Bilgilendirme",
